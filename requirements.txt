@@ -1,0 +1,6 @@
+Django==5.2.1
+python-decouple==3.8
+psycopg==3.2.9
+python-telegram-bot==22.1
+APScheduler==3.11.0
+tzlocal==5.3.1

@@ -1,0 +1,24 @@
+{% extends "custom_admin/base.html" %}
+
+{% block content %}
+<h2 class="text-center mb-4">Сводная таблица продуктов</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Название продукта</th>
+            <th>Общее количество</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in summary %}
+        <tr>
+            <td>{{ item.name }}</td>
+            <td>{{ item.total_quantity }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
+
+

@@ -1,0 +1,40 @@
+# Byte-compiled / optimized / DLL files
+pycache/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+*.pyo
+*.db
+*.sqlite3
+
+# Local env files
+.env
+*.env
+
+# Secret settings
+settings_local.py
+config/settings_local.py
+
+# Media / static (если генерируется вручную или на сервере)
+media/
+staticfiles/
+
+# PyCharm
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+
+# Virtual environment
+venv/
+env/
+ENV/

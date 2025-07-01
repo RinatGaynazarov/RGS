@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Авторизация</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url("https://i.pinimg.com/736x/b7/46/cb/b746cb577969f0cdea33db4c126d7919.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+        }
+
+        .custom-form {
+            backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgb(133, 130, 130);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            padding: 2rem;
+            width: 100%;
+            max-width: 400px;
+            color: #fff;
+        }
+
+        .custom-form input[type="text"],
+        .custom-form input[type="password"],
+        .custom-form input[type="email"] {
+            border: 2px solid #4a4343;
+            border-radius: 50px;
+            padding: 10px 20px;
+            outline: none;
+            transition: 0.3s;
+            background-color: rgb(32, 14, 199);
+            color: #000;
+        }
+
+        .custom-form .custom-btn {
+            background-color:#4a4343 ;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            transition: 0.3s;
+        }
+
+        .custom-form .custom-btn:hover {
+            background-color: #0d6efd;
+            transform: translateY(-2px);
+        }
+
+        .custom-form input:focus {
+            border-color: #200ec7;
+            box-shadow: 0 0 8px #6610f2;
+        }
+
+        .custom-form label {
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+
+        .custom-form button {
+            color: #000;
+            border-radius: 50px;
+        }
+
+        @media (max-width: 500px) {
+            .custom-form {
+                padding: 1.5rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body class="d-flex flex-column align-items-center justify-content-center min-vh-100">
+
+    <h1 class="mb-5 text-white text-center">Добро пожаловать</h1>
+
+
+    <form method="post" class="custom-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn custom-btn w-100 mt-3">Войти</button>
+    </form>
+
+</body>
+</html>
