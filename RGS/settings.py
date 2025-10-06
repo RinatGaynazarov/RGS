@@ -20,13 +20,14 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 CSRF_TRUSTED_ORIGINS = ['https://rgs-ax0b.onrender.com']
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-co&+=2ytzr5$+p=^h!^z5)_o70k&z0fj@0966tclam#$x*7yj4'
+SECRET_KEY = '1nx!e8ib=(l(o9t)x8xl__*6xkvi2pa9#%+mkbowurbdq_f623'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
