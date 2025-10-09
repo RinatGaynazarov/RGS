@@ -33,7 +33,7 @@ SECRET_KEY = '1nx!e8ib=(l(o9t)x8xl__*6xkvi2pa9#%+mkbowurbdq_f623'
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
 ALLOWED_HOSTS = ['rgs-ax0b.onrender.com','127.0.0.1']
-
+CSRF_TRUSTED_ORIGINS = ["https://rgs-ax0b.onrender.com/login/?next=/"]
 
 # Application definition
 
@@ -132,6 +132,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 
 LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/'
